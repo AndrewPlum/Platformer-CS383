@@ -12,17 +12,7 @@ public class Player : Entity
 
     public Transform headCheck;
     public LayerMask brickLayer;
-
-    // Health bar 
-    public int maxHealth = 100;
-    public int currentHealth;
-    public HealthBar healthBar;
-
-    // Set starting health
-    void Start(){
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-    }
+    public Health health;
     
     // Deal with the controls as well as the jumping of the character.
     void Update()
@@ -37,12 +27,15 @@ public class Player : Entity
         }
 
         flip();
-        currentState.UpdateState(this);
-
-        // add code about taking damage when enemy location = player location when enemies are created
-        if (Input.GetKeyDown(KeyCode.H)){
-            TakeDamage(20);
+        // Check if currentState is not null before calling UpdateState
+        if (currentState != null)
+        {
+            currentState.UpdateState(this);
+        } else {
+            // Optionally, log an error or handle the case where currentState is null
+            Debug.LogError("currentState is null! Ensure it's properly initialized.");
         }
+        ShowHealth();
     }
 
     // Move the player
@@ -85,10 +78,12 @@ public class Player : Entity
         currentState.OnCollisionEnter(this);
     }
 
-    // subtracts health from player when hit
-    void TakeDamage(int damage){
-        currentHealth -= damage;
+    public void ShowHealth()
+    {
 
-        healthBar.SetHealth(currentHealth);
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            health.ShowHealth();
+        }
     }
 }
