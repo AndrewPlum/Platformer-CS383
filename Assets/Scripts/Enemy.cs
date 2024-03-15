@@ -6,14 +6,14 @@ public class Enemy : MonoBehaviour{
     public GameObject player;
     public float distance; 
 
-    [Header ("Patrol Points")]
+    [Header ("Enemy Direction")]
     [SerializeField]private Transform leftEdge;
     [SerializeField]private Transform rightEdge;
 
     [Header ("Enemy")]
     [SerializeField] private Transform enemy;
 
-    [Header("Movement parameters")]
+    [Header("Movement Parameters")]
     [SerializeField] private float speed;
     private Vector3 initScale;
     private bool movingLeft;
@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour{
     private void Update(){
         distance = Vector2.Distance(transform.position,player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
-        if(distance<10){
+        if(distance < 10){
             transform.position = Vector2.MoveTowards(this.transform.position,player.transform.position, speed*Time.deltaTime);
         }
         if(movingLeft){
