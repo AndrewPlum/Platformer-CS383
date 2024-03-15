@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
     // Call this function to apply damage and handle collisions with obstacles
     public void HandleCollisions(Collision2D collision)
     {
-        if (collision.transform.tag == "Obstacle")
+        if (collision.transform.tag == "Enemy")
         {
             TakeDamage(10);
             Destroy(collision.gameObject); // Destroy the obstacle
