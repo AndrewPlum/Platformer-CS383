@@ -113,9 +113,9 @@ TextureImporter:
       name: Pixel GUI Buttons pack 3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 352
-        width: 64
+        x: 64
+        y: 192
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
