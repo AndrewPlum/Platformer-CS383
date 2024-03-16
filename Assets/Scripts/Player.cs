@@ -35,7 +35,7 @@ public class Player : Entity
             // Optionally, log an error or handle the case where currentState is null
             Debug.LogError("currentState is null! Ensure it's properly initialized.");
         }
-        ShowHealth();
+        //ShowHealth();
     }
 
     // Move the player
@@ -78,6 +78,7 @@ public class Player : Entity
         currentState.OnCollisionEnter(this);
     }
 
+    /*
     public void ShowHealth()
     {
 
@@ -86,4 +87,5 @@ public class Player : Entity
             health.ShowHealth();
         }
     }
+    */
 }

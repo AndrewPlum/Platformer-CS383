@@ -11,12 +11,14 @@ public class CoinBar : MonoBehaviour
     public Image fill; 
     //public TextMeshProUGUI coinText;
     //Setting Max value for health so we don't have change it inside Unity Editor 
+    ///*
     public void SetMaxHealth() { 
         slider.maxValue = 150;
         slider.value = 0; //start at 0 health 
         fill.color = gradient.Evaluate(1f); 
 
     }
+    //*/
 
     //Change health from Slider inside HealthBar 
     public void SetHealth(int health) { 

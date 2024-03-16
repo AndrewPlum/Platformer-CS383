@@ -294,9 +294,11 @@ GameObject:
   - component: {fileID: 147626311}
   - component: {fileID: 147626310}
   - component: {fileID: 147626312}
+  - component: {fileID: 147626314}
+  - component: {fileID: 147626315}
   m_Layer: 0
-  m_Name: Coins
-  m_TagString: Untagged
+  m_Name: Coin
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,7 +364,7 @@ Transform:
   m_GameObject: {fileID: 147626309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.84, y: 6.48, z: 0}
+  m_LocalPosition: {x: -6.72, y: -4.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -389,6 +391,55 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &147626314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147626309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650543fa36d0dc34f8c0842625bbb45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinbar: {fileID: 1562286158}
+  entity: {fileID: 0}
+--- !u!58 &147626315
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147626309}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.8
 --- !u!1001 &335095841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -570,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 358863839}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.84, y: 8.5, z: 0}
+  m_LocalPosition: {x: -15.32, y: 15.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3964,15 +4015,15 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 7529888280791069955}
   - {fileID: 358863842}
+  - {fileID: 704460746}
+  - {fileID: 7529888280791069955}
   - {fileID: 3199487444720666901}
   - {fileID: 8931013492610292565}
   - {fileID: 2093784518}
   - {fileID: 2050584652}
   - {fileID: 1598914471194421425}
   - {fileID: 1614053407}
-  - {fileID: 704460746}
   - {fileID: 6317532666798209513}
   - {fileID: 1838244567}
   - {fileID: 335095841}
