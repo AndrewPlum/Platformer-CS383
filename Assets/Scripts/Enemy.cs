@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour{
-    public GameObject player;
+    public GameObject player; // will assign dynamically at runtime by EnemyManager.cs
     public float distance; 
 
-    [Header ("Enemy Direction")]
+    /*
+    // Set range of movement
+    [Header ("Enemy Bounds")]
     [SerializeField]private Transform leftEdge;
     [SerializeField]private Transform rightEdge;
+    // Will add later if time
+    //*/
 
     [Header ("Enemy")]
     [SerializeField] private Transform enemy;
@@ -26,12 +30,14 @@ public class Enemy : MonoBehaviour{
         initScale = enemy.localScale;
     }
 
-    private void Update(){
+    private void FixedUpdate(){
         distance = Vector2.Distance(transform.position,player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
         if(distance < 10){
             transform.position = Vector2.MoveTowards(this.transform.position,player.transform.position, speed*Time.deltaTime);
         }
+        /*
+        // Set range of enemy movement
         if(movingLeft){
             if(enemy.position.x >= leftEdge.position.x){
                 MoveInDirection(-1);
@@ -45,6 +51,7 @@ public class Enemy : MonoBehaviour{
                 DirectionChange();
             }
         }
+        //*/
     }
 
     private void DirectionChange(){
