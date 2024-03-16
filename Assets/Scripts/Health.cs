@@ -11,14 +11,18 @@ public class Health : MonoBehaviour
     public HealthBar healthBar;
     public Entity entity; // Reference to the Entity script
     public TextMeshProUGUI healthText;
+    public CoinBar coinBar;
+    [SerializeField] public TextMeshProUGUI coinText;
+    public int coinHealth;
 
-    void Start()
+    public void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        coinBar = FindObjectOfType<CoinBar>(); // getting reference to coinbar for the game over screen
     }
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         // You can handle other player input or events here if needed
 
@@ -82,6 +86,7 @@ public class Health : MonoBehaviour
 
             // Wait for 5 seconds before loading the game over scene
             StartCoroutine(LoadGameOverSceneAfterDelay(2.5f));
+            // SetupGameOver(2.5f);
         }
         else
         {
@@ -89,11 +94,29 @@ public class Health : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
     }
-
+    public IEnumerator SetupGameOver(float delay){
+        Time.timeScale = 0f;
+        yield return new WaitForSeconds(delay);
+        gameObject.SetActive(true);
+        
+        if (coinBar != null){
+            coinText = coinBar.coinText;
+            coinHealth = coinBar.coinHealth;
+            //if(coinText != null){
+            coinText.text = coinHealth.ToString() + " Points";
+            //}
+        }
+    }
     private IEnumerator LoadGameOverSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-
+        if (coinBar != null){
+            coinText = coinBar.coinText;
+            coinHealth = coinBar.coinHealth;
+            if(coinText != null){
+                coinText.text = coinHealth.ToString() + " Points";
+            }
+        }
         // Load the game over scene
         SceneManager.LoadScene("GameOver"); 
     }

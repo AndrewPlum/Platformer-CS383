@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CoinBar : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class CoinBar : MonoBehaviour
     public Slider slider; 
     public Gradient gradient; 
     public Image fill; 
-    //public TextMeshProUGUI coinText;
+    public TextMeshProUGUI coinText;
     //Setting Max value for health so we don't have change it inside Unity Editor 
     ///*
     public void SetMaxHealth() { 

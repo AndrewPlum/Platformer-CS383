@@ -32,6 +32,7 @@ public class ClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
 
     public void SwitchScene(string sceneName){
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
 
