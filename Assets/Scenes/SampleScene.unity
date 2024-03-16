@@ -5501,6 +5501,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77485970100569374, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 77485970100569374, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 902516714030271253, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.363742
+      objectReference: {fileID: 0}
+    - target: {fileID: 902516714030271253, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.4710293
+      objectReference: {fileID: 0}
+    - target: {fileID: 902516714030271253, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15.818398
+      objectReference: {fileID: 0}
     - target: {fileID: 902516714030271253, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.8499975
@@ -5541,10 +5561,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1093602879748348117, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_Size.x
+      value: 0.1943048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093602879748348117, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_Size.y
+      value: 0.37355042
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093602879748348117, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00014980137
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093602879748348117, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0006655529
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093602879748348117, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093602879748348117, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509978749251847959, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509978749251847959, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 1649349953457611877, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 541972441}
+    - target: {fileID: 1813756301843753223, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -160862842, guid: 982925f6804b06b4e8b6e03d323b3d96, type: 3}
     - target: {fileID: 2461950450768159793, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5553,6 +5609,22 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1631463589}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: MushrioDead
+      value: 
+      objectReference: {fileID: 9100000, guid: bf7636aade577f043a8adc3a95d3c7f6, type: 2}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: MushrioIdle
+      value: 
+      objectReference: {fileID: 9100000, guid: f3e4f9b6207f57442b285aea8f2e6f8d, type: 2}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: MushrioJump
+      value: 
+      objectReference: {fileID: 9100000, guid: f4c34093665a9044488ecb9750165a96, type: 2}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: MushrioWalkR
+      value: 
+      objectReference: {fileID: 9100000, guid: 9bb68bc3d576db04c9f77e95048acdde, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
