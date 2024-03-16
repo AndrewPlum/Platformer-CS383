@@ -18,9 +18,10 @@ public class Health : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // You can handle other player input or events here if needed
+
     }
 
     // Call this function to apply damage and handle collisions with obstacles
@@ -30,6 +31,10 @@ public class Health : MonoBehaviour
         {
             TakeDamage(10);
             Destroy(collision.gameObject); // Destroy the obstacle
+            /*if (currentHealth <= 0)
+            {
+               SceneManager.LoadScene("GameOver"); // Load the "GameOver" scene when health is 0 or below
+            }*/
             // Add any other logic you need, like pausing or handling the jump over the obstacle
         }
         if (collision.transform.tag == "FinalBoss")
@@ -90,7 +95,7 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         // Load the game over scene
-        SceneManager.LoadScene("EndMenu"); // Replace "GameOverSceneName" with the actual name of your game over scene
+        SceneManager.LoadScene("GameOver"); 
     }
      public void ShowHealth()
     {
