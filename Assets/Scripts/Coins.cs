@@ -42,7 +42,7 @@ public class Coins : MonoBehaviour
         if (other.tag == "Player")
         {
             Destroy(gameObject); // Destroy the Coin object
-            coinbar.UpdateHealth(100);
+            coinbar.UpdateHealth(10);
         }
     }
 /*
