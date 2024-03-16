@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8104179578295043517}
   - component: {fileID: 6760636157842827621}
+  - component: {fileID: 5506183028393413335}
   m_Layer: 8
   m_Name: Foreground
   m_TagString: Untagged
@@ -84,6 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5506183028393413335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091931861092245229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541d457e546d5fc4b82684e94ba52b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0.5
 --- !u!1 &4928665368978992038
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,6 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2799650747640309562}
   - component: {fileID: 4051029102558135743}
+  - component: {fileID: 160518224989431282}
   m_Layer: 8
   m_Name: MountainsAndSkyline
   m_TagString: Untagged
@@ -202,6 +218,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &160518224989431282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924142602022545433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541d457e546d5fc4b82684e94ba52b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0.8
 --- !u!1001 &2075382479491854794
 PrefabInstance:
   m_ObjectHideFlags: 0
