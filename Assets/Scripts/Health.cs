@@ -61,10 +61,6 @@ public class Health : MonoBehaviour
             // Wait for 2.5 seconds before loading the "EndMenu" scene
             StartCoroutine(LoadGameOverSceneAfterDelay(2.5f));
         }
-        //if (collision.transform.tag == "Sword")
-        //{
-        //    StartCoroutine(LoadVictorySceneAfterDelay(1f));
-        //}
     }
 
     void TakeDamage(int damage)
@@ -110,12 +106,6 @@ public class Health : MonoBehaviour
         // Load the game over scene
         SceneManager.LoadScene("GameOver"); 
     }
-    /* extra if needed
-    private IEnumerator LoadVictorySceneAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("VicrotyScene"); 
-    } */
      public void ShowHealth()
     {
         healthText.text = "Health : " + currentHealth;

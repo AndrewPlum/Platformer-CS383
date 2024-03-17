@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Obtain the blade ere your final breath!
+  m_text: Obtain thy blade ere your final breath!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81be09d1287d422438f217f24a238f42, type: 2}
   m_sharedMaterial: {fileID: 6617697323749855941, guid: 81be09d1287d422438f217f24a238f42, type: 2}
