@@ -7097,10 +7097,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4636759014425447056, guid: 6781b01c26a3a4442a0f9f83bba54851, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 297018326, guid: 299b069f0b371aa49916ff16e98da9d1, type: 3}
     - target: {fileID: 5862833748507686962, guid: 6781b01c26a3a4442a0f9f83bba54851, type: 3}
       propertyPath: m_Name
       value: Coin
       objectReference: {fileID: 0}
+    - target: {fileID: 7544535893036694782, guid: 6781b01c26a3a4442a0f9f83bba54851, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6588514e87e96294e8afbf04215e248c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1529764137, guid: 475614a161e182a49afbeffaae7876ee, type: 3}
+  m_Sprite: {fileID: 297018326, guid: 299b069f0b371aa49916ff16e98da9d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 5862833748507686962}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3abdde204249493429af5d7cec7c55d6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6588514e87e96294e8afbf04215e248c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,6 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinbar: {fileID: 0}
   entity: {fileID: 0}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!58 &7394802494465300625
 CircleCollider2D:
   m_ObjectHideFlags: 0
