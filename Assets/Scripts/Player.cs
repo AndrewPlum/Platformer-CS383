@@ -13,10 +13,15 @@ public class Player : Entity
     public Transform headCheck;
     public LayerMask brickLayer;
     public Health health;
+
+    public Transform attackPoint;
+    public LayerMask enemyLayer;
+    [SerializeField] private float radius;
+
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip audioClip;
-    
-    // Deal with the controls as well as the jumping of the character.
+
+    // Deal with the controls, jumping, and attacking of the character.
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
@@ -25,6 +30,12 @@ public class Player : Entity
         {
             audioSource.PlayOneShot(audioClip);
             currentState = jumpingState;
+            currentState.EnterState(this);
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            currentState = attackState;
             currentState.EnterState(this);
         }
 
@@ -80,4 +91,28 @@ public class Player : Entity
         currentState.OnCollisionEnter(this);
     }
 
+    // return to idle state
+    private void ReturnIdleState()
+    {
+        currentState = idleState;
+        currentState.EnterState(this);
+    }
+
+    // deletes enemies in range of attack
+    public void Attack()
+    {
+        Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemyLayer);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            //Debug.Log("Hit enemy with sword");
+            Destroy(enemyGameObject.gameObject);
+        }
+    }
+
+    // for visualizing attack circle
+    /*private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPoint.position, radius);
+    }*/
 }

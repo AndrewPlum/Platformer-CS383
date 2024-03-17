@@ -2894,6 +2894,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032654275}
   m_CullTransparentMesh: 1
+--- !u!1 &1057844041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1057844042}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1057844042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057844041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 386120650}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1072535670
 GameObject:
   m_ObjectHideFlags: 0
@@ -7167,10 +7198,14 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 541972441}
+    - target: {fileID: 1649349953457611877, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4e2da90c9c6818e4496c19852190ece9, type: 2}
     - target: {fileID: 1813756301843753223, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -160862842, guid: 982925f6804b06b4e8b6e03d323b3d96, type: 3}
+      objectReference: {fileID: 1359359084, guid: 1f3fc12e929d3e6469fe104960941c98, type: 3}
     - target: {fileID: 2461950450768159793, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7188,6 +7223,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 386120652}
     - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: audioClip
       value: 
       objectReference: {fileID: 8300000, guid: aade25d384b79154f855ea1e38555c6f, type: 3}
@@ -7204,6 +7243,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: f4c34093665a9044488ecb9750165a96, type: 2}
     - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1057844042}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 386120651}
@@ -7211,9 +7254,20 @@ PrefabInstance:
       propertyPath: MushrioWalkR
       value: 
       objectReference: {fileID: 9100000, guid: 9bb68bc3d576db04c9f77e95048acdde, type: 2}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: MushrioAttack
+      value: 
+      objectReference: {fileID: 9100000, guid: 4e2da90c9c6818e4496c19852190ece9, type: 2}
+    - target: {fileID: 6437292708842018899, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 902516714030271253, guid: 7729c7cd450654747a169dc329b70828, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1057844042}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2461950450768159793, guid: 7729c7cd450654747a169dc329b70828, type: 3}
       insertIndex: -1

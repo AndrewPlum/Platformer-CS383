@@ -18,6 +18,7 @@ public class Entity : MonoBehaviour
     public RuntimeAnimatorController MushrioWalkR;
     public RuntimeAnimatorController MushrioIdle;
     public RuntimeAnimatorController MushrioDead;
+    public RuntimeAnimatorController MushrioAttack;
 
     // public RuntimeAnimatorController MehrioIdle;
     // public RuntimeAnimatorController MehrioDead; 
@@ -27,6 +28,8 @@ public class Entity : MonoBehaviour
     public EntityDeadState deadState = new EntityDeadState();
     public EntityJumpingState jumpingState = new EntityJumpingState();
     public EntityRunState runState = new EntityRunState();
+    public EntityAttackState attackState = new EntityAttackState();
+
     // Start is called before the first frame update
     void Start()
     {
