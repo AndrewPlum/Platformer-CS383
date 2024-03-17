@@ -61,6 +61,10 @@ public class Health : MonoBehaviour
             // Wait for 2.5 seconds before loading the "EndMenu" scene
             StartCoroutine(LoadGameOverSceneAfterDelay(2.5f));
         }
+        //if (collision.transform.tag == "Sword")
+        //{
+        //    StartCoroutine(LoadVictorySceneAfterDelay(1f));
+        //}
     }
 
     void TakeDamage(int damage)
@@ -86,25 +90,11 @@ public class Health : MonoBehaviour
 
             // Wait for 5 seconds before loading the game over scene
             StartCoroutine(LoadGameOverSceneAfterDelay(2.5f));
-            // SetupGameOver(2.5f);
         }
         else
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
-        }
-    }
-    public IEnumerator SetupGameOver(float delay){
-        Time.timeScale = 0f;
-        yield return new WaitForSeconds(delay);
-        gameObject.SetActive(true);
-        
-        if (coinBar != null){
-            coinText = coinBar.coinText;
-            coinHealth = coinBar.coinHealth;
-            //if(coinText != null){
-            coinText.text = coinHealth.ToString() + " Points";
-            //}
         }
     }
     private IEnumerator LoadGameOverSceneAfterDelay(float delay)
@@ -120,6 +110,12 @@ public class Health : MonoBehaviour
         // Load the game over scene
         SceneManager.LoadScene("GameOver"); 
     }
+    /* extra if needed
+    private IEnumerator LoadVictorySceneAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("VicrotyScene"); 
+    } */
      public void ShowHealth()
     {
         healthText.text = "Health : " + currentHealth;

@@ -80,14 +80,4 @@ public class Player : Entity
         currentState.OnCollisionEnter(this);
     }
 
-    /*
-    public void ShowHealth()
-    {
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            health.ShowHealth();
-        }
-    }
-    */
 }

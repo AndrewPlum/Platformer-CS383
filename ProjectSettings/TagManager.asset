@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Coin
   - CoinBar
+  - Sword
   layers:
   - Default
   - TransparentFX
