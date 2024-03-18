@@ -34,13 +34,14 @@ public class Health : MonoBehaviour
         if (collision.transform.tag == "Enemy")
         {
             TakeDamage(10);
-            Destroy(collision.gameObject); // Destroy the obstacle
+            // Destroy(collision.gameObject); // Destroy the obstacle        // now handled in enemy script
             /*if (currentHealth <= 0)
             {
                SceneManager.LoadScene("GameOver"); // Load the "GameOver" scene when health is 0 or below
             }*/
             // Add any other logic you need, like pausing or handling the jump over the obstacle
         }
+
         if (collision.transform.tag == "FinalBoss")
         {
             //Destroy(collision.gameObject); 
@@ -55,7 +56,7 @@ public class Health : MonoBehaviour
             Animator animator = collision.gameObject.GetComponent<Animator>();
             if (animator != null)
             {
-                animator.runtimeAnimatorController = boss.MushrioDead as RuntimeAnimatorController;
+                animator.runtimeAnimatorController = boss.Dead as RuntimeAnimatorController;
             }
 
             // Wait for 2.5 seconds before loading the "EndMenu" scene
@@ -81,7 +82,7 @@ public class Health : MonoBehaviour
             Animator animator = GetComponent<Animator>();
             if (animator != null)
             {
-                animator.runtimeAnimatorController = entity.MushrioDead as RuntimeAnimatorController;
+                animator.runtimeAnimatorController = entity.Dead as RuntimeAnimatorController;
             }
 
             // Wait for 5 seconds before loading the game over scene

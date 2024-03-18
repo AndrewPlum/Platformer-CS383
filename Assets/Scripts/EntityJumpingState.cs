@@ -15,7 +15,7 @@ public class EntityJumpingState : EntityState
 
         Debug.Log("Trying Animation Play");
         Animator animator = entity.GetComponent<Animator>();
-        animator.runtimeAnimatorController = entity.MushrioJump as RuntimeAnimatorController;
+        animator.runtimeAnimatorController = entity.Jump as RuntimeAnimatorController;
          
     }
     public override void UpdateState(Entity entity)

@@ -8,11 +8,9 @@ public class EntityAttackState : EntityState
 {
     public override void EnterState(Entity entity)
     {
-        Debug.Log("Enter Attack State");
-
         Debug.Log("Trying Attack Animation");
         Animator animator = entity.GetComponent<Animator>();
-        animator.runtimeAnimatorController = entity.MushrioAttack as RuntimeAnimatorController;
+        animator.runtimeAnimatorController = entity.Attack as RuntimeAnimatorController;
 
     }
 
@@ -29,12 +27,5 @@ public class EntityAttackState : EntityState
     public override void OnCollisionEnter(Entity entity)
     {
 
-    }
-
-    public void ReturnIdleState(Entity entity)
-    {
-        Debug.Log("animation playing");
-        entity.currentState = entity.idleState;
-        entity.currentState.EnterState(entity);
     }
 }

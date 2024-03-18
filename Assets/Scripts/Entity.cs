@@ -6,6 +6,7 @@ public class Entity : MonoBehaviour
 {
     public float horizontal;
     public Rigidbody2D rigidBody;
+    private bool isFacingRight = true;
 
     [SerializeField]
     public float speed;
@@ -14,11 +15,11 @@ public class Entity : MonoBehaviour
     public float jumpingPower;
 
     //public Animator anim;
-    public RuntimeAnimatorController MushrioJump;
-    public RuntimeAnimatorController MushrioWalkR;
-    public RuntimeAnimatorController MushrioIdle;
-    public RuntimeAnimatorController MushrioDead;
-    public RuntimeAnimatorController MushrioAttack;
+    public RuntimeAnimatorController Jump;
+    public RuntimeAnimatorController WalkR;
+    public RuntimeAnimatorController Idle;
+    public RuntimeAnimatorController Dead;
+    public RuntimeAnimatorController Attack;
 
     // public RuntimeAnimatorController MehrioIdle;
     // public RuntimeAnimatorController MehrioDead; 
@@ -42,5 +43,17 @@ public class Entity : MonoBehaviour
     void Update()
     {
         
+    }
+
+    // Flip the direction of the player depending on the which direction the player is moved.
+    public void flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }

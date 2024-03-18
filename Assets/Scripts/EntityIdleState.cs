@@ -10,7 +10,7 @@ public class EntityIdleState : EntityState
     {
         Debug.Log("Enter Idle State");
         Animator animator = entity.GetComponent<Animator>();
-        animator.runtimeAnimatorController = entity.MushrioIdle as RuntimeAnimatorController;
+        animator.runtimeAnimatorController = entity.Idle as RuntimeAnimatorController;
     }
 
     public override void UpdateState(Entity entity)
@@ -19,6 +19,7 @@ public class EntityIdleState : EntityState
         if (entity.horizontal != 0)
         {
             //Sets and runs the current state as entity.runState. (The running state)
+            Debug.Log("horiz not 0");
             entity.currentState = entity.runState;
             entity.currentState.EnterState(entity);
         }

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    private bool isFacingRight = true;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -69,18 +68,6 @@ public class Player : Entity
         return Physics2D.OverlapCircle(headCheck.position, 0.2f, brickLayer);
     }
 
-    // Flip the direction of the player depending on the which direction the player is moved.
-    private void flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
-    }
-
     // Determine whether the player has come into contact with a brick from the bottom.
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -99,7 +86,7 @@ public class Player : Entity
     }
 
     // deletes enemies in range of attack
-    public void Attack()
+    public void AttackPressed()
     {
         Collider2D[] enemy = Physics2D.OverlapCircleAll(attackPoint.position, radius, enemyLayer);
 

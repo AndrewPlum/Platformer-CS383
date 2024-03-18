@@ -11,7 +11,7 @@ public class EntityRunState : EntityState
 
         Debug.Log("Trying Run Animation");
         Animator animator = entity.GetComponent<Animator>();
-        animator.runtimeAnimatorController = entity.MushrioWalkR as RuntimeAnimatorController;
+        animator.runtimeAnimatorController = entity.WalkR as RuntimeAnimatorController;
     }
 
     public override void UpdateState(Entity entity)

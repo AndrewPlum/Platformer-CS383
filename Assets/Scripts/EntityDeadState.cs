@@ -10,7 +10,7 @@ public class EntityDeadState : EntityState
     public override void EnterState(Entity entity)
     {
         Animator animator = entity.GetComponent<Animator>();
-        animator.runtimeAnimatorController = entity.MushrioDead as RuntimeAnimatorController;
+        animator.runtimeAnimatorController = entity.Dead as RuntimeAnimatorController;
     }
 
     public override void UpdateState(Entity entity)

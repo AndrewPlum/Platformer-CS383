@@ -214,11 +214,11 @@ MonoBehaviour:
   rigidBody: {fileID: 2584938386071327593}
   speed: 8
   jumpingPower: 19
-  MushrioJump: {fileID: 9100000, guid: f4c34093665a9044488ecb9750165a96, type: 2}
-  MushrioWalkR: {fileID: 9100000, guid: 9bb68bc3d576db04c9f77e95048acdde, type: 2}
-  MushrioIdle: {fileID: 9100000, guid: f3e4f9b6207f57442b285aea8f2e6f8d, type: 2}
-  MushrioDead: {fileID: 9100000, guid: bf7636aade577f043a8adc3a95d3c7f6, type: 2}
-  MushrioAttack: {fileID: 9100000, guid: 4e2da90c9c6818e4496c19852190ece9, type: 2}
+  Jump: {fileID: 9100000, guid: f4c34093665a9044488ecb9750165a96, type: 2}
+  WalkR: {fileID: 9100000, guid: 9bb68bc3d576db04c9f77e95048acdde, type: 2}
+  Idle: {fileID: 9100000, guid: f3e4f9b6207f57442b285aea8f2e6f8d, type: 2}
+  Dead: {fileID: 9100000, guid: bf7636aade577f043a8adc3a95d3c7f6, type: 2}
+  Attack: {fileID: 9100000, guid: 4e2da90c9c6818e4496c19852190ece9, type: 2}
   groundCheck: {fileID: 77485970100569374}
   groundLayer:
     serializedVersion: 2

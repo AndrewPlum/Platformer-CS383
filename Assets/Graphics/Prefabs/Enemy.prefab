@@ -184,7 +184,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004354216, y: -0.1360521}
+  m_Offset: {x: 0.019816324, y: -0.04881963}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -195,7 +195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.10553685, y: 0.19293724}
+  m_Size: {x: 0.23864594, y: 0.3674022}
   m_EdgeRadius: 0
 --- !u!50 &5681539161396667554
 Rigidbody2D:
@@ -257,8 +257,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b341c106eaebdab4cbf5f4994292ca91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  rigidBody: {fileID: 0}
+  speed: 5
+  jumpingPower: 0
+  Jump: {fileID: 0}
+  WalkR: {fileID: 9100000, guid: f926f76c521b0544da8cfbce18930149, type: 2}
+  Idle: {fileID: 9100000, guid: 69f87243802e0db4086202845c0a7db5, type: 2}
+  Dead: {fileID: 9100000, guid: f879185a15e69cf49ba42a7c68bbbdab, type: 2}
+  Attack: {fileID: 9100000, guid: c29af50d51a055c42baf3f31e25a0934, type: 2}
   player: {fileID: 0}
   distance: 10
   enemy: {fileID: 2584565665755163785}
-  speed: 5
   idleDuration: 1
