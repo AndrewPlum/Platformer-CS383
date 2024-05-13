@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class ClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
